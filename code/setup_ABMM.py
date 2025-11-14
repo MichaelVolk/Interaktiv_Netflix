@@ -1,15 +1,7 @@
-import pandas as pd 
-import os 
 import numpy as np
-import sys
 import matplotlib.pyplot as plt
 
 import template.output as output
-import template.questions as questions
-import template.text_order_widget as text_order_widget
-import template.table_widget as table
-
-import setup_language_checks as messages
 
 u11 = 2 
 u12 = 0.2
@@ -57,10 +49,17 @@ mC4 = -0.5
 mC5 = 1000
 mC6 = 1000
 
-    
-# TODO: Strings auslagern zur Übersetzung
+aaa = 5
+
 
 ####### Ausgaben  
+
+def check_Block1(AB_1):
+    if AB_1:
+        output.wrong("Das ist leider Falsch")
+    else:
+        output.success("Das ist richtig!")
+
 
 def checkCompute_r34_AC(compute_r34):
     
