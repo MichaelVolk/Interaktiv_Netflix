@@ -54,11 +54,16 @@ aaa = 5
 
 ####### Ausgaben  
 
-def check_Block1(AB_1):
-    if AB_1:
-        output.wrong("Das ist leider Falsch")
-    else:
-        output.success("Das ist richtig!")
+def check_Block1(answers):
+    real_answers = [True, False, True, True]
+    if None in answers:
+        output.wrong("Ersetze alle \"None\"")
+        return
+    for i in range(len(answers)):
+        if answers[i] != real_answers[i]:
+            output.wrong("Es stimmen noch nicht alle Ergebnisse!")
+            return
+    output.success("Alle Ergebnisse stimmen!")
 
 
 def checkCompute_r34_AC(compute_r34):
