@@ -65,6 +65,16 @@ def check_Block1(answers):
             return
     output.success("Alle Ergebnisse stimmen!")
 
+def check_product(C):
+    real_answer = np.array([[7,8],[13,14]])
+    if None in C:
+        output.wrong("Ersetze alle \"None\".")
+        return
+    if (C==real_answer).all():
+        output.success("Das Matrixprodukt ist richtig!")
+        print(C)
+        return
+    output.wrong("Das scheint was noch nicht zu stimmen...")
 
 def checkCompute_r34_AC(compute_r34):
     
