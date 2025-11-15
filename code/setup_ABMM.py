@@ -27,9 +27,9 @@ def check_product(C):
     output.wrong("Das scheint was noch nicht zu stimmen...")
 
 
-def check_produkt_eintragen(C):
-    real_answer = np.array([[],
-                            []])
+def check_produkt_eintrag(C):
+    real_answer = np.array([[6, 16.5],
+                            [5, 34]])
     if (C==real_answer).all():
         output.success("Die Funktion ist richtig implementiert!")
     else:
