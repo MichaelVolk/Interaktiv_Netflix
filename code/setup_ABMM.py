@@ -20,11 +20,19 @@ def check_product(C):
     if None in C:
         output.wrong("Ersetze alle \"None\".")
         return
-    if (C==real_answer).all():
-        output.success("Das Matrixprodukt ist richtig!")
-        print(C)
-        return
-    output.wrong("Das scheint was noch nicht zu stimmen...")
+    if C[0][1] == real_answer[0][1]:
+        output.success("Eintrag C[0][1] stimmt!")
+    else:
+        output.wrong("Eintrag C[0][1] stimmt nicht!")
+    if C[1][0] == real_answer[1][0]:
+        output.success("Eintrag C[1][0] stimmt!")
+    else:
+        output.wrong("Eintrag C[1][0] stimmt nicht!")
+    if C[1][1] == real_answer[1][1]:
+        output.success("Eintrag C[1][1] stimmt!")
+    else:
+        output.wrong("Eintrag C[1][1] stimmt nicht!")
+    # output.wrong("Das scheint was noch nicht zu stimmen...")
 
 
 def check_produkt_eintrag(C):
